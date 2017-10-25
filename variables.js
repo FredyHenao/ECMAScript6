@@ -41,4 +41,24 @@ if( true ){
 
 console.log(IMPUESTO_SV);
 
+/* declaracion de funciones en ciclos */
 
+var funciones = [];
+
+for( let i=0; i<10; i++ ){
+    //versioón 6 cambiando var por let
+    funciones.push( function () {
+        console.log(i);
+    } );
+    /* Versión anterior
+    funciones.push((function (valor) {
+        return function () {
+            console.log(valor);
+        }
+    })(i)
+    );*/
+}
+
+funciones.forEach( function (func) {
+    func();
+} );
