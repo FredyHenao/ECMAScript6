@@ -26,3 +26,12 @@ let Persona = {
 }
 
 saludar();
+
+/* cómo los valores por defecto afectan el objeto "arguments" */
+//afectan cuando no se envian valores a la función y se pone valores por defecto
+
+function sumar(a = 1,b = 2) {
+   console.log(arguments);
+}
+
+sumar();
