@@ -13,3 +13,11 @@ let alumnos_arr = ["Fernando"];
 let alumnos_arr2 = agregar_alumnos(alumnos_arr, "Maria","Pedro","Susana","Juan","Hernando");
 
 console.log(alumnos_arr2);
+
+/*Restricciones del parámetro REST
+* 1. Sólo puede existir un parámetro rest en la función
+* 2. El parámetro rest debe de ir siempre como último parámetro*/
+
+function juntar_nombres( ...nombres, apellidos) {
+
+}
