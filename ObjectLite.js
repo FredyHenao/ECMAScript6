@@ -19,3 +19,19 @@ function crearPersona( nombre, apellido, edad ) {
 var fredy = crearPersona("Fredy","Henao",30);
 
 console.log( fredy );
+
+/*Metodos simples o concisos*/
+
+var persona = {
+    nombre: "Fernando",
+
+    /*getNombre: function () {
+        console.log( this.nombre );
+    }*/
+    //metodo conciso
+    getNombre(){
+        console.log( this.nombre );
+    }
+}
+
+persona.getNombre();
