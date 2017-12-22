@@ -28,4 +28,25 @@ Object.setPrototypeOf( angora, perro );
 console.log( Object.getPrototypeOf( angora ) === gato );
 
 angora.sonido();
-angora.chillido();
+//angora.chillido();
+
+/*Acceso al prototipo con la referencia "SUPER"*/
+
+let persona = {
+  saludar(){
+      return "Hola";
+  }
+};
+
+let amigo = {
+  saludar(){
+      //ES5
+      //return Object.getPrototypeOf(this).saludar.call(this) + ", saludos!!!";
+      //ES6
+      return super.saludar() + ", saludos!!!";
+  }
+};
+
+Object.setPrototypeOf( amigo, persona );
+
+console.log( amigo.saludar() );
