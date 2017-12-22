@@ -119,3 +119,19 @@ let otraFruta = "manzana";
 [ otraFruta ] = frutas;
 console.log( otraFruta );
 
+/*Destructuración de arreglos anidados
+* la destructuracion utilizando el operador rest solo funciona para arreglos para objetos no*/
+
+let colores1 = [ "rojo",["verde","amarillo"],"morado","naranja" ];
+
+let [ color1, [color2] ] = colores1;
+
+console.log(color1);
+console.log(color2);
+
+let colores2 = ["rojo","verde","amarillo","morado","naranja"];
+
+let [ colorPrincipal, ...demasColores ] = colores2;
+
+console.log( colorPrincipal );
+console.log( demasColores );
