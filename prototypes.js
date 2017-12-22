@@ -50,3 +50,18 @@ let amigo = {
 Object.setPrototypeOf( amigo, persona );
 
 console.log( amigo.saludar() );
+
+/*Destructuración de objetos*/
+
+let ajustes = {
+    nombre : "Fredy Henao",
+    email : "fredy@gmail.com",
+    facebook : "fre45y",
+    google : "jhon45",
+    premium : true,
+    twitter : "jhon453"
+}
+
+let { nombre, email, facebook = "jajaaj", twitter:cuentaTwi = "fre45"} = ajustes;
+
+console.log( cuentaTwi, facebook );
