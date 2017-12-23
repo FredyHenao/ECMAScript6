@@ -54,10 +54,22 @@ let id = Symbol.for("id unico");
 console.log( Symbol.keyFor( id ) );
 
 let id2 = Symbol.for("id unico");
-console.log( "Hola " + Symbol.keyFor( id2 ) );
+console.log( Symbol.keyFor( id2 ) );
 
 console.log( id === id2 );
 
 let id3 = Symbol("id unico");
 console.log( Symbol.keyFor( id3 ) );
+
+/*Coerción de los símbolos*/
+
+let id4 = Symbol.for("id");
+let numero = 10;
+let texto = '10';
+let bool = true;
+let NotAN = NaN;
+
+console.log( numero + texto );
+console.log( "Mi simbolo es:", id4 );
+console.log( "Mi simbolo es:" + String(id4) );
 
