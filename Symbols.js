@@ -73,3 +73,28 @@ console.log( numero + texto );
 console.log( "Mi simbolo es:", id4 );
 console.log( "Mi simbolo es:" + String(id4) );
 
+/*Recuperando las propiedades símbolo*/
+
+let id5 = Symbol.for("ID");
+let activo = Symbol.for("activo");
+
+let persona1 = {
+    [id5]: "123",
+    [activo]: true,
+  nombre: "Fredy",
+  apellido: "Henao",
+  edad: 31
+};
+
+console.log( Object.keys(persona1) );
+
+for( key in persona1 ){
+    console.log( key, persona1[key] );
+}
+
+let simbolos = Object.getOwnPropertySymbols(persona1);
+console.log( simbolos );
+
+for( i in simbolos ){
+    console.log( simbolos[i], Symbol.keyFor( simbolos[i] ) );
+}
