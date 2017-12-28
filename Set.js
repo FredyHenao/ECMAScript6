@@ -19,3 +19,16 @@ items.add("7");
 console.log( items.size );*/
 
 console.log( items );
+
+/*Removiendo valores*/
+
+let items2 = new Set( [1,2,3,4,5] );
+//eliminar un valor
+items2.delete( 3 );
+
+console.log( items2 );
+
+//eliminar todos los valores
+items2.clear();
+
+console.log( items2 );
