@@ -32,3 +32,12 @@ console.log( items2 );
 items2.clear();
 
 console.log( items2 );
+
+/*forEach() en los Sets*/
+
+let personas = new Set(["Fredy","Jhon","Edilma"]);
+
+personas.forEach( function ( valor, llave, setOriginal) {
+    console.log( valor, llave, setOriginal );
+    console.log( personas === setOriginal );
+} );
