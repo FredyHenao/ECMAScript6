@@ -41,3 +41,23 @@ personas.forEach( function ( valor, llave, setOriginal) {
     console.log( valor, llave, setOriginal );
     console.log( personas === setOriginal );
 } );
+
+/*Convertir un Set a un Array*/
+
+let numeros = [1,2,3,4,5,6,7];
+
+/*let setNumeros = new Set(numeros);
+
+console.log( setNumeros );
+
+let arrayNumeros = [...setNumeros];*/
+
+let arrayNumeros = eliminaDuplicados( numeros );
+
+console.log( arrayNumeros );
+
+function  eliminaDuplicados( item ) {
+
+    return [... new Set(item)];
+
+}
