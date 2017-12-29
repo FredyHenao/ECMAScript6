@@ -53,3 +53,28 @@ let Persona2 = class{
 let mario = new Persona2();
 console.log( typeof mario );
 console.log( mario instanceof Persona2 );
+
+/*Clases como parámetros*/
+
+class Cuadrado{
+    constructor(lado){
+        this.lado = lado;
+    }
+
+    getArea(){
+        return this.lado * this.lado;
+    }
+}
+
+function imprimirCuadrado( cuadrado ) {
+    if( !(cuadrado instanceof Cuadrado) ){
+        console.log( "El parametro enviado no es un cuadrado" );
+    }
+
+    console.log( cuadrado.getArea() );
+}
+
+let mesa = new Cuadrado(10);
+
+//imprimirCuadrado("Fredy");
+imprimirCuadrado( mesa );
