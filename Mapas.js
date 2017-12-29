@@ -26,3 +26,13 @@ console.log( mapa );
 mapa.clear();
 
 console.log( mapa );
+
+/*Inicialización de mapas*/
+
+let mapa1 = new Map( [ ["nombre","Jhon"], ["edad",21], [undefined,null] ] );
+
+console.log( mapa1 );
+
+console.log( mapa1.get( undefined ) );
+
+/**/
