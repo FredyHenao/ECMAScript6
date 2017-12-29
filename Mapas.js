@@ -35,4 +35,11 @@ console.log( mapa1 );
 
 console.log( mapa1.get( undefined ) );
 
-/**/
+/*foreach() de los mapas*/
+
+let mapa2 = new Map( [ ["nombre","Jhon"], ["edad",21] ] );
+
+mapa2.forEach( (valor, llave, mapaOrigen) => {
+    console.log( ` Llave: ${llave}, valor: ${valor} ` );
+    console.log( mapaOrigen );
+} );
