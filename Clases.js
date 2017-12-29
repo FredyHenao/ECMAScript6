@@ -34,3 +34,22 @@ let jhon = new Persona("Fredy");
 jhon.decirNombre();
 
 console.log( typeof Persona );
+
+/*Clases como expresiones*/
+
+let Persona2 = class{
+
+    constructor(){
+        this.nombre = "";
+        this.edad = 21;
+        this.direccion = "Facatativá"
+    }
+
+    decirNombre(){
+        console.log( "Hola Mundo" );
+    }
+}
+
+let mario = new Persona2();
+console.log( typeof mario );
+console.log( mario instanceof Persona2 );
