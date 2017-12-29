@@ -23,3 +23,23 @@ class Persona{
 let yo = Persona.crear( "Fredy" );
 
 console.log( yo );
+
+/*Promesas->procesos asincronos*/
+
+function tareaAsincrona() {
+
+    let promesa = new Promise((reolve, reject)=>{
+
+        setTimeout(function () {
+            console.log("Proceso Asincrono termonado");
+        },1300)
+
+    })
+    return promesa;
+}
+
+tareaAsincrona().then( function () {
+    console.log("Todo OK!");
+} );
+
+console.log("Código secuencial");
